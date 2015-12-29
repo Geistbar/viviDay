@@ -208,13 +208,13 @@ void buffs(boolean consume)
 	cli_execute("outfit mp");
 	use_familiar($familiar[disembodied hand]);
 	cli_execute("cast * resolution");
-	getUse(1,$item[red snowcone]);
-	getUse(1,$item[Gene Tonic: Constellation]);
-	getUse(1,$item[pink candy heart]);
+	//getUse(1,$item[red snowcone]);
+	//getUse(1,$item[Gene Tonic: Constellation]);
+	//getUse(1,$item[pink candy heart]);
 	getUse(1,$item[Knob Goblin pet-buffing spray]);
 	getUse(1,$item[Knob Goblin nasal spray]);
-	getUse(1,$item[resolution: be wealthier]);
-	getUse(1,$item[Meat-inflating powder]);
+	//getUse(1,$item[resolution: be wealthier]);
+	//getUse(1,$item[Meat-inflating powder]);
 	getChibiBuff();
 	cli_execute("summon 2");
 	cli_execute("hatter 22");
@@ -264,7 +264,8 @@ void fax()
 	if (item_amount($item[photocopied monster]) == 0)
 		cli_execute("faxbot knob goblin embezzler");
 	cli_execute("outfit Meat1");
-	//cli_execute("autoattack Meat1");
+	
+	/*
 	cli_execute("ccs Meat1");
 	cli_execute("familiar Obtuse Angel");
 	visit_url("place.php?whichplace=chateau&action=chateau_painting");
@@ -277,8 +278,16 @@ void fax()
 	use(1,$item[Spooky Putty monster]);
 	use(1,$item[Spooky Putty monster]);
 	use(1,$item[Spooky Putty monster]);
-	cli_execute("ccs default"); 
+	cli_execute("ccs default");
 	use(1,$item[Spooky Putty monster]);
+	use(1,$item[photocopied monster]);
+	*/
+	
+	cli_execute("ccs Meat3");
+	cli_execute("familiar Obtuse Angel");
+	visit_url("place.php?whichplace=chateau&action=chateau_painting");
+	run_combat();
+	cli_execute("ccs default");
 	use(1,$item[photocopied monster]);
 }
 /*******************************************************
@@ -516,11 +525,11 @@ void dataProcess()
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
-	cli_execute("viviStartDay.ash");
+/* 	cli_execute("viviStartDay.ash");
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
 	cli_execute("fold loathing legion helicopter");
- 	buffs(TRUE);
+ 	buffs(TRUE); */
 	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos();
 	fax();
