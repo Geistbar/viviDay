@@ -523,6 +523,7 @@ void main()
 	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos();
 	fax();
+	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
 	cli_execute("autoGlacier.ash");
 	diner();
