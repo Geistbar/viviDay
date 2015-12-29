@@ -285,6 +285,7 @@ void fax()
 	visit_url("place.php?whichplace=chateau&action=chateau_painting");
 	run_combat();
 	cli_execute("ccs default");
+	cli_execute("familiar Hobo Monkey");
 	use(1,$item[photocopied monster]);
 }
 /*******************************************************
@@ -334,7 +335,7 @@ void yellowRay()
 }
 void diner()
 {
-/* 	// Consumables
+ 	// Consumables
 	equip($item[Brimstone Beret]);
 	use_skill(2,$skill[The Ode to Booze]);
 	getDrink(5,$item[perfect cosmopolitan]);
@@ -357,7 +358,7 @@ void diner()
 	use_familiar($familiar[Stocking Mimic]);
 	if (have_effect($effect[Merry Smithsness]) < 20)
 		use(1,$item[Flaskfull of Hollow]); // Make sure smithsness is running
-	// Buffs */
+	// Buffs
 	wobble($effect[Wasabi Sinuses], $item[Knob Goblin nasal spray], 10);
 	wobble($effect[Merry Smithsness], $item[Flaskfull of Hollow], 150);
 	// Have fam, outfit, etc
@@ -522,17 +523,19 @@ void dataProcess()
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
-/* 	cli_execute("viviStartDay.ash");
+ 	cli_execute("viviStartDay.ash");
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
 	cli_execute("fold loathing legion helicopter");
+	use_familiar($familiar[Stocking Mimic]);
+	equip($slot[familiar],$item[loathing legion helicopter]);
  	buffs(TRUE);
 	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos(); 
 	fax();
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
-	cli_execute("autoGlacier.ash");*/
+	cli_execute("autoGlacier.ash");
 	diner();
 	farm();
 	dataEnd(); // Store new inventory, meat, and turncount
