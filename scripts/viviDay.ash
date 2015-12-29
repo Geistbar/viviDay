@@ -289,9 +289,10 @@ void fax()
 void freeRun(location place)
 {
   	cli_execute("outfit BootRunaway1");
-	//bjornify_familiar($familiar[Spooky Pirate Skeleton]);
+	cli_execute("autoattack BootRunaway1");
 	use_familiar($familiar[Pair of Stomping Boots]);
 	equip($slot[familiar],$item[Ittah bittah hookah]);
+	//bjornify_familiar($familiar[Spooky Pirate Skeleton]);
 	
 	bootsRun(availableRunaways(),place);
 	equip($slot[acc3],$item[belt of loathing]);
