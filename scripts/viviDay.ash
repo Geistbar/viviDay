@@ -147,11 +147,8 @@ void getUse(int qty, item it)
 	{
 		if ((it == $item[knob goblin pet-buffing spray]) || (it == $item[Knob Goblin nasal spray]))
 		{
-			cli_execute("/whitelist Intelligent Storage Inc.");
-			take_stash(1,$item[Travoltan Trousers]);
-			cli_execute("Buy " + qtyNeeded + " " + it);
-			put_stash(1,$item[Travoltan Trousers]);
-			cli_execute("/whitelist The Clan Of Intelligent People");
+			if (item_amount(it) < 100)
+				chat_private("Giestbar","I'm low on " + it);
 		}
 		else
 			cli_execute("Buy " + qtyNeeded + " " + it);
@@ -337,7 +334,7 @@ void yellowRay()
 }
 void diner()
 {
-	// Consumables
+/* 	// Consumables
 	equip($item[Brimstone Beret]);
 	use_skill(2,$skill[The Ode to Booze]);
 	getDrink(5,$item[perfect cosmopolitan]);
@@ -360,7 +357,7 @@ void diner()
 	use_familiar($familiar[Stocking Mimic]);
 	if (have_effect($effect[Merry Smithsness]) < 20)
 		use(1,$item[Flaskfull of Hollow]); // Make sure smithsness is running
-	// Buffs
+	// Buffs */
 	wobble($effect[Wasabi Sinuses], $item[Knob Goblin nasal spray], 10);
 	wobble($effect[Merry Smithsness], $item[Flaskfull of Hollow], 150);
 	// Have fam, outfit, etc
@@ -533,9 +530,9 @@ void main()
 	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos(); 
 	fax();
-	cli_execute("autoVolcano.ash");*/
+	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
-	cli_execute("autoGlacier.ash");
+	cli_execute("autoGlacier.ash");*/
 	diner();
 	farm();
 	dataEnd(); // Store new inventory, meat, and turncount
