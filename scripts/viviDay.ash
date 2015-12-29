@@ -262,7 +262,7 @@ void brickos()
 void fax()
 {
 	if (item_amount($item[photocopied monster]) == 0)
-		cli_execute("faxbot knob goblin embezzler");
+		cli_execute("faxbot embezzler");
 	cli_execute("outfit Meat1");
 	
 	/*
@@ -415,7 +415,7 @@ void rollover()
 	put_closet(item_amount($item[rubber nubbin]),$item[rubber nubbin]);
 	//cli_execute("PvPItemCheck.ash");
 	// Get ready for rollover
-	cli_execute("faxbot knob goblin embezzler");
+	cli_execute("faxbot embezzler");
 	equip($item[Pantsgiving]);
 	while (get_property("timesRested").to_int() < total_free_rests())
 		cli_execute("rest");
@@ -529,9 +529,9 @@ void main()
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
 	cli_execute("fold loathing legion helicopter");
- 	buffs(TRUE); */
+ 	buffs(TRUE);
 	freeRun($location[A Mob of Zeppelin Protesters]);
-	brickos();
+	brickos(); */
 	fax();
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
