@@ -531,9 +531,9 @@ void main()
 	cli_execute("fold loathing legion helicopter");
  	buffs(TRUE);
 	freeRun($location[A Mob of Zeppelin Protesters]);
-	brickos(); */
+	brickos(); 
 	fax();
-	cli_execute("autoVolcano.ash");
+	cli_execute("autoVolcano.ash");*/
 	cli_execute("autoConspiracy.ash");
 	cli_execute("autoGlacier.ash");
 	diner();
