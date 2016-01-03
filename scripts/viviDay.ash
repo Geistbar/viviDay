@@ -288,6 +288,19 @@ void fax()
 	cli_execute("familiar Hobo Monkey");
 	use(1,$item[photocopied monster]);
 }
+
+/*******************************************************
+*					machineTunnels()
+*	Gets daily five free combats from the machine tunnels.
+/*******************************************************/
+void machineTunnels()
+{
+	use_familiar($familiar[Machine Elf]);
+	equip($slot[acc3],$item[Mr. Cheeng's spectacles]);
+	while(get_property("_machineTunnelsAdv").to_int() < 5)
+		adv1($location[The Deep Machine Tunnels],-1,"");
+}
+
 /*******************************************************
 *					freeRun()
 *	Was taking up too much space. Runs away a bunch of
@@ -524,6 +537,7 @@ void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
  	cli_execute("viviStartDay.ash");
+	machineTunnels();
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
 	cli_execute("fold loathing legion helicopter");
