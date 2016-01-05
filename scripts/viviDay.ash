@@ -348,7 +348,7 @@ void yellowRay()
 }
 void diner()
 {
- /* 	// Consumables
+ 	// Consumables
 	equip($item[Brimstone Beret]);
 	use_skill(2,$skill[The Ode to Booze]);
 	getDrink(5,$item[perfect cosmopolitan]);
@@ -379,7 +379,7 @@ void diner()
 	cli_execute("outfit Beach1");
 	cli_execute("autoattack Beach");
 	// Get early stuff done; CSA fire-starter kit
-	adventure(30,$location[Sloppy seconds Diner]); */
+	adventure(30,$location[Sloppy seconds Diner]);
 	cli_execute("outfit Beach2");
 	adventure(15,$location[Sloppy seconds Diner]);
 	// Eat food now
@@ -536,7 +536,7 @@ void dataProcess()
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
-/*  	cli_execute("viviStartDay.ash");
+ 	cli_execute("viviStartDay.ash");
 	machineTunnels();
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
@@ -549,7 +549,7 @@ void main()
 	fax();
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
-	cli_execute("autoGlacier.ash"); */
+	cli_execute("autoGlacier.ash");
 	diner();
 	farm();
 	dataEnd(); // Store new inventory, meat, and turncount
