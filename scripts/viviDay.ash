@@ -356,7 +356,7 @@ void diner()
 	getChew(3,$item[Grim fairy tale]);
 	getUse(1,$item[mojo filter]);
 	getChew(1,$item[Grim fairy tale]);
-	getUse(1,$item[Choco-Crimbot]);
+	//getUse(1,$item[Choco-Crimbot]);
 	getUse(1,$item[chocolate turtle totem]);
 	cli_execute("shrug ode");
 	equip($item[crumpled felt fedora]);
@@ -496,6 +496,8 @@ void dataProcess()
 			invStop[it]=invStart[it];	// Script doesn't handle chibi buddies well
 		if (it == $item[ChibiBuddy&trade; (off)])
 			invStop[it]=invStart[it];	// Script doesn't handle chibi buddies well
+		if (it == $item[pantsgiving])
+			invStop[it]=invStart[it];	// Script doesn't handle pantsgiving well
 		if (it == $item[stinky cheese eye])
 			invStop[it] = invStart[it];
 		if (invStop[it] > invStart[it])
@@ -536,7 +538,7 @@ void dataProcess()
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
- 	/* cli_execute("viviStartDay.ash");
+ 	cli_execute("viviStartDay.ash");
 	machineTunnels();
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
@@ -549,7 +551,7 @@ void main()
 	fax();
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
-	cli_execute("autoGlacier.ash"); */
+	//cli_execute("autoGlacier.ash");
 	diner();
 	farm();
 	dataEnd(); // Store new inventory, meat, and turncount
