@@ -183,6 +183,23 @@ void numberology(int digits)
 /*-----------------------------------------------------
 *					Main-Functions Start
 /*----------------------------------------------------*/
+/*******************************************************
+*					snojo()
+*	Gets daily ten free combats from the snojo.
+/*******************************************************/
+void snojo()
+{
+	use_familiar($familiar[Ms. Puck Man]);
+	equip($slot[acc3],$item[Mr. Cheeng's spectacles]);
+	equip($slot[familiar],$item[blue pumps]);
+	while(get_property("_snojoFreeFights").to_int() < 10)
+		adv1($location[The X-32-F Combat Training Snowman],-1,"");
+}
+
+/*******************************************************
+*					buffs()
+*	Gets daily buffs. If argument is TRUE, also drinks.
+/*******************************************************/
 void buffs(boolean consume)
 {
 	// Get MP & smithsness just in case
