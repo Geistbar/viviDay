@@ -568,7 +568,8 @@ void main()
 	equip($slot[familiar],$item[loathing legion helicopter]);
  	buffs(TRUE);
 	freeRun($location[A Mob of Zeppelin Protesters]);
-	brickos(); 
+	brickos();
+	snojo();
 	fax();
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
