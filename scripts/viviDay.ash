@@ -402,13 +402,13 @@ void diner()
 	// Get early stuff done; CSA fire-starter kit
 	adventure(30,$location[Sloppy seconds Diner]);
 	cli_execute("outfit Beach2");
-	adventure(15,$location[Sloppy seconds Diner]);
+	adventure(20,$location[Sloppy seconds Diner]);
 	// Eat food now
 	getUse(1,$item[milk of magnesium]);
 	getEat(1,$item[snow crab]);
 	adventure(2,$location[Sloppy seconds Diner]);
 	getEat(1,$item[snow crab]);
-	adventure(17,$location[Sloppy seconds Diner]);
+	adventure(12,$location[Sloppy seconds Diner]);
 }
 void farm()
 {
