@@ -559,7 +559,7 @@ void dataProcess()
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
- 	/* cli_execute("viviStartDay.ash");
+ 	cli_execute("viviStartDay.ash");
 	machineTunnels();
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
@@ -572,7 +572,7 @@ void main()
 	snojo();
 	fax();
 	cli_execute("autoVolcano.ash");
-	cli_execute("autoConspiracy.ash"); */
+	cli_execute("autoConspiracy.ash");
 	//cli_execute("autoGlacier.ash");
 	diner();
 	farm();
