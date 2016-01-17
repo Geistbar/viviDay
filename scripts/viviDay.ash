@@ -413,7 +413,7 @@ void diner()
 void farm()
 {
 	// Buffs
-	wobble($effect[Wasabi Sinuses], $item[Knob Goblin nasal spray], 10);
+	/* wobble($effect[Wasabi Sinuses], $item[Knob Goblin nasal spray], 10);
 	wobble($effect[Merry Smithsness], $item[Flaskfull of Hollow], 150);
 	wobble($effect[How to Scam Tourists], $item[How to Avoid Scams], 20); // Buff for mtn
 	cli_execute("clanhop.ash (The Clan Of Intelligent People)");
@@ -421,7 +421,7 @@ void farm()
 	cli_execute("pool 1");
 	cli_execute("clanhop.ash (Thud!)");
 	// Finish adventuring -- Loop at final location while YRing
-	cli_execute("outfit mountain1"); // Last outfit change!
+	cli_execute("outfit mountain1"); // Last outfit change! */
 	while (my_adventures() > 0)
 	{	
 		numberology(69);	// Get my extra adventures
@@ -559,7 +559,7 @@ void dataProcess()
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
- 	cli_execute("viviStartDay.ash");
+ 	/* cli_execute("viviStartDay.ash");
 	machineTunnels();
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
@@ -574,7 +574,7 @@ void main()
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
 	//cli_execute("autoGlacier.ash");
-	diner();
+	diner(); */
 	farm();
 	dataEnd(); // Store new inventory, meat, and turncount
 	/* invStartPvP = get_inventory();
