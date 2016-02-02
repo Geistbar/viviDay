@@ -43,6 +43,8 @@ float mpa;
 float mpaTotal;
 int wins;
 int fights;
+string winMessage = "Hi!";
+string loseMessage = "Hi!";
 boolean spiderFought = FALSE;
 boolean calcUniverse = TRUE;
 /*-----------------------------------------------------
@@ -553,6 +555,27 @@ void dataProcess()
 			wins+=1;
 	}
 }
+
+/*******************************************************
+*					PvPFights()
+*	Runs PvP fights with specified attacks.
+/*******************************************************/
+void PvPFights(int stance, string hitfor)
+{
+	invStartPvP = get_inventory();
+	fights = pvp_attacks_left();
+	
+	use_familiar($familiar[mad hatrack]);
+	cli_execute("outfit PvP");
+	
+	string attackURL = "peevpee.php?action=fight&place=fight&attacktype=" + hitFor + "&ranked=1" + "&stance=" + stance + "&who=" + "&losemessage=" + loseMessage + "&winmessage=" + winMessage;
+	while (pvp_attacks_left() > 0)
+	{
+		visit_url(attackURL); 
+	}
+	
+	invStopPvP = get_inventory();
+}
 /*******************************************************
 *					Functions Stop
 /*******************************************************/
@@ -577,10 +600,7 @@ void main()
 	diner();
 	farm();
 	dataEnd(); // Store new inventory, meat, and turncount
-	/* invStartPvP = get_inventory();
-	fights = pvp_attacks_left();
-	cli_execute("robPvP.ash");
-	invStopPvP = get_inventory(); */
+	PvPFights(1,"fame"); // "fame" or "flowers" or "lootwhatever"
 	rollover();
 	
 	// How much meat did I make?
