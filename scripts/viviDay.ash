@@ -600,7 +600,7 @@ void main()
 	diner();
 	farm();
 	dataEnd(); // Store new inventory, meat, and turncount
-	PvPFights(1,"fame"); // "fame" or "flowers" or "lootwhatever"
+	PvPFights(1,"lootwhatever"); // "fame" or "flowers" or "lootwhatever"
 	rollover();
 	
 	// How much meat did I make?
