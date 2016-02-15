@@ -442,8 +442,8 @@ void farm()
 void rollover()
 {
 	// Put stuff in store and closet
-	put_shop(0,0,$item[Five Second Energy&trade;]);
-	put_shop(0,0,$item[Jerks' Health&trade; Magazine]);
+	put_closet(item_amount($item[Five Second Energy&trade;]),$item[Five Second Energy&trade;]);
+	put_closet(item_amount($item[Jerks' Health&trade; Magazine]),$item[Jerks' Health&trade; Magazine]);
 	put_closet(item_amount($item[black snowcone]),$item[black snowcone]);
 	put_closet(item_amount($item[fish juice box]),$item[fish juice box]);
 	put_closet(item_amount($item[rubber nubbin]),$item[rubber nubbin]);
