@@ -380,7 +380,7 @@ void diner()
 	getUse(1,$item[mojo filter]);
 	getChew(1,$item[Grim fairy tale]);
 	//getUse(1,$item[Choco-Crimbot]);
-	getUse(1,$item[chocolate turtle totem]);
+	//getUse(1,$item[chocolate turtle totem]);
 	cli_execute("shrug ode");
 	equip($item[crumpled felt fedora]);
 	//use_skill(1,$skill[Bind Lasagmbie]);
