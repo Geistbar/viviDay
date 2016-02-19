@@ -372,7 +372,7 @@ void yellowRay()
 void diner()
 {
  	// Consumables
-/* 	equip($item[Brimstone Beret]);
+	equip($item[Brimstone Beret]);
 	use_skill(2,$skill[The Ode to Booze]);
 	getDrink(5,$item[perfect cosmopolitan]);
 	drink(1,$item[cold one]);
@@ -380,7 +380,7 @@ void diner()
 	getUse(1,$item[mojo filter]);
 	getChew(1,$item[Grim fairy tale]);
 	//getUse(1,$item[Choco-Crimbot]);
-	getUse(1,$item[chocolate turtle totem]); */
+	getUse(1,$item[chocolate turtle totem]);
 	cli_execute("shrug ode");
 	equip($item[crumpled felt fedora]);
 	//use_skill(1,$skill[Bind Lasagmbie]);
@@ -582,7 +582,7 @@ void PvPFights(int stance, string hitfor)
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
-/*  	cli_execute("viviStartDay.ash");
+ 	cli_execute("viviStartDay.ash");
 	machineTunnels();
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
@@ -595,7 +595,7 @@ void main()
 	snojo();
 	fax();
 	cli_execute("autoVolcano.ash");
-	cli_execute("autoConspiracy.ash"); */
+	cli_execute("autoConspiracy.ash");
 	//cli_execute("autoGlacier.ash");
 	diner();
 	farm();
