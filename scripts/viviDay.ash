@@ -565,7 +565,7 @@ void PvPFights(int stance, string hitfor)
 	invStartPvP = get_inventory();
 	fights = pvp_attacks_left();
 	
-	use_familiar($familiar[mad hatrack]);
+	use_familiar($familiar[exotic parrot]);
 	cli_execute("outfit PvP");
 	
 	string attackURL = "peevpee.php?action=fight&place=fight&attacktype=" + hitFor + "&ranked=1" + "&stance=" + stance + "&who=" + "&losemessage=" + loseMessage + "&winmessage=" + winMessage;
