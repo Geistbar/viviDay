@@ -593,7 +593,7 @@ void main()
 	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos();
 	snojo();
-	fax();
+/* 	fax();
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
 	//cli_execute("autoGlacier.ash");
@@ -618,5 +618,5 @@ void main()
 	print(""); // Formatting
 	print("Total PvP item profits: " + rnum(itemGainPvP,2) + " meat", "maroon");
 	print(""); // Formatting
-	print("You won " + wins + " out of " + fights + " PvP fights!", "maroon");
+	print("You won " + wins + " out of " + fights + " PvP fights!", "maroon"); */
 }
