@@ -199,6 +199,7 @@ void chessFight()
 		case "knight":
 		n =
 	} */
+	take_stash(1,$item[spooky putty sheet]);
 	int n = 0;
 	while (n < 5)
 	{
@@ -207,6 +208,7 @@ void chessFight()
 		visit_url("choice.php?option=1&pwd=" + my_hash() + "&whichchoice=1182&piece=" + 1936, false);
 		n+=1;
 	}
+	put_stash(1,$item[spooky putty sheet]);
 }
 /*******************************************************
 *					snojo()
@@ -603,8 +605,8 @@ void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
  	cli_execute("viviStartDay.ash");
-	machineTunnels();
-	chessFight();
+	machineTunnels();	
+	chessFight();	
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
 	cli_execute("fold loathing legion helicopter");
