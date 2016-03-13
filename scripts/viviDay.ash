@@ -186,6 +186,29 @@ void numberology(int digits)
 *					Main-Functions Start
 /*----------------------------------------------------*/
 /*******************************************************
+*					chessfight()
+*	Fights chess pieces at the new witchness set.
+/*******************************************************/
+void chessFight()
+{
+/* 	int n;
+	switch (piece)
+	{
+		case "pawn":
+		n = 1935; break;
+		case "knight":
+		n =
+	} */
+	int n = 0;
+	while (n < 5)
+	{
+		visit_url("campground.php?action=witchess");
+		run_choice(1);
+		visit_url("choice.php?option=1&pwd=" + my_hash() + "&whichchoice=1182&piece=" + 1936, false);
+		n+=1;
+	}
+}
+/*******************************************************
 *					snojo()
 *	Gets daily ten free combats from the snojo.
 /*******************************************************/
@@ -284,11 +307,9 @@ void fax()
 		cli_execute("faxbot embezzler");
 	cli_execute("outfit Meat1");
 	
-	/*
 	cli_execute("ccs Meat1");
 	cli_execute("familiar Obtuse Angel");
 	visit_url("place.php?whichplace=chateau&action=chateau_painting");
-	visit_url("fight.php");
 	run_combat();
 	cli_execute("outfit Meat2");
 	cli_execute("familiar Hobo Monkey");
@@ -300,15 +321,14 @@ void fax()
 	cli_execute("ccs default");
 	use(1,$item[Spooky Putty monster]);
 	use(1,$item[photocopied monster]);
-	*/
 	
-	cli_execute("ccs Meat3");
+/* 	cli_execute("ccs Meat3");
 	cli_execute("familiar Obtuse Angel");
 	visit_url("place.php?whichplace=chateau&action=chateau_painting");
 	run_combat();
 	cli_execute("ccs default");
 	cli_execute("familiar Hobo Monkey");
-	use(1,$item[photocopied monster]);
+	use(1,$item[photocopied monster]); */
 }
 
 /*******************************************************
@@ -584,6 +604,7 @@ void main()
 	dataStart(); // Store inventory, meat, and adventures for calculations
  	cli_execute("viviStartDay.ash");
 	machineTunnels();
+	chessFight();
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
 	cli_execute("fold loathing legion helicopter");
