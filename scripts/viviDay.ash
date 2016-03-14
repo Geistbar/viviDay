@@ -182,6 +182,7 @@ void numberology(int digits)
 			calcUniverse = FALSE;
 	}
 }
+
 /*-----------------------------------------------------
 *					Main-Functions Start
 /*----------------------------------------------------*/
@@ -604,9 +605,10 @@ void PvPFights(int stance, string hitfor)
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
- 	cli_execute("viviStartDay.ash");
+ 	cli_execute("aa beach");
+	/* cli_execute("viviStartDay.ash");
 	machineTunnels();	
-	chessFight();	
+	chessFight(); */
 	take_stash(1,$item[pantsgiving]);
 	take_stash(1,$item[loathing legion knife]);
 	cli_execute("fold loathing legion helicopter");
