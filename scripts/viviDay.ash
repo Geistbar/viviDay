@@ -605,7 +605,7 @@ void PvPFights(int stance, string hitfor)
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
- 	/* cli_execute("aa beach");
+ 	cli_execute("aa beach");
 	cli_execute("viviStartDay.ash");
 	machineTunnels();	
 	chessFight();
@@ -618,7 +618,7 @@ void main()
 	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos();
 	snojo();
-	fax(); */
+	fax();
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
 	//cli_execute("autoGlacier.ash");
