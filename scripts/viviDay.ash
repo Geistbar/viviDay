@@ -200,7 +200,6 @@ void chessFight()
 		case "knight":
 		n =
 	} */
-	take_stash(1,$item[spooky putty sheet]);
 	int n = 0;
 	while (n < 5)
 	{
@@ -209,7 +208,6 @@ void chessFight()
 		visit_url("choice.php?option=1&pwd=" + my_hash() + "&whichchoice=1182&piece=" + 1936, false);
 		n+=1;
 	}
-	put_stash(1,$item[spooky putty sheet]);
 }
 /*******************************************************
 *					snojo()
@@ -306,6 +304,7 @@ void brickos()
 /*******************************************************/
 void fax()
 {
+	take_stash(1,$item[spooky putty sheet]);
 	if (item_amount($item[photocopied monster]) == 0)
 		cli_execute("faxbot embezzler");
 	cli_execute("outfit Meat1");
@@ -324,6 +323,7 @@ void fax()
 	cli_execute("ccs default");
 	use(1,$item[Spooky Putty monster]);
 	use(1,$item[photocopied monster]);
+	put_stash(1,$item[spooky putty sheet]);
 	
 /* 	cli_execute("ccs Meat3");
 	cli_execute("familiar Obtuse Angel");
@@ -605,7 +605,7 @@ void PvPFights(int stance, string hitfor)
 void main()
 {
 	dataStart(); // Store inventory, meat, and adventures for calculations
- 	cli_execute("aa beach");
+ 	/* cli_execute("aa beach");
 	cli_execute("viviStartDay.ash");
 	machineTunnels();	
 	chessFight();
@@ -618,7 +618,7 @@ void main()
 	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos();
 	snojo();
-	fax();
+	fax(); */
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
 	//cli_execute("autoGlacier.ash");
