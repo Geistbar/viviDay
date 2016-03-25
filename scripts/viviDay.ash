@@ -187,19 +187,65 @@ void numberology(int digits)
 *					Main-Functions Start
 /*----------------------------------------------------*/
 /*******************************************************
+*					consume1()
+*	First consumption collection.
+/*******************************************************/
+void consume1()
+{
+	// Drink
+	equip($item[Brimstone Beret]);
+	use_skill(3,$skill[The Ode to Booze]);
+	getDrink(1,$item[Broberry brogurt]);
+	getDrink(1,$item[ambitious turkey]);
+	getDrink(5,$item[perfect cosmopolitan]);
+	drink(1,$item[cold one]);
+	cli_execute("shrug ode");
+	equip($item[crumpled felt fedora]);
+	
+	// Spleen
+	getChew(3,$item[Grim fairy tale]);
+	getUse(1,$item[mojo filter]);
+	getChew(1,$item[Grim fairy tale]);
+	//getUse(1,$item[Choco-Crimbot]);
+	//getUse(1,$item[chocolate turtle totem]);
+
+	// Eat
+	eat(1,$item[spaghetti breakfast]);
+	getEat(4,$item[jumping horseradish]);
+	getEat((fullness_limit() - my_fullness() ) / 5,$item[Karma shawarma]);
+}
+
+/*******************************************************
+*					consume2()
+*	Second & final consumption collection.
+/*******************************************************/
+/* void consume2()
+{
+	getUse(3,$item[milk of magnesium]);
+	getEat((fullness_limit() - my_fullness() ) / 5,$item[Karma shawarma]);
+	adventure(2,$location[Sloppy seconds Diner]);
+	getEat(1,$item[snow crab]);
+	adventure(2,$location[Sloppy seconds Diner]);
+	getEat(1,$item[snow crab]);
+} */
+/*******************************************************
+*					grabStash()
+*	Grabs items from clan stash and sets up for use.
+/*******************************************************/
+void grabStash()
+{
+	take_stash(1,$item[pantsgiving]);
+	take_stash(1,$item[loathing legion knife]);
+	cli_execute("fold loathing legion helicopter");
+	use_familiar($familiar[Stocking Mimic]);
+	equip($slot[familiar],$item[loathing legion helicopter]);
+}
+/*******************************************************
 *					chessfight()
 *	Fights chess pieces at the new witchness set.
 /*******************************************************/
 void chessFight()
 {
-/* 	int n;
-	switch (piece)
-	{
-		case "pawn":
-		n = 1935; break;
-		case "knight":
-		n =
-	} */
 	int n = 0;
 	while (n < 5)
 	{
@@ -234,15 +280,6 @@ void buffs(boolean consume)
 		restore_mp(400); // Get some MP just in case
 	if (have_effect($effect[Merry Smithsness]) == 0)
 		use(1,$item[Flaskfull of Hollow]); // Make sure smithsness is running
-	if (consume)
-	{
-		equip($item[Brimstone Beret]); // Song limit
-		use_skill(1,$skill[The Ode to Booze]);
-		getDrink(1,$item[Broberry brogurt]);
-		getDrink(1,$item[ambitious turkey]);
-		cli_execute("shrug ode");
-		equip($item[crumpled felt fedora]);
-	}
 	use(1,$item[Defective Game Grid token]);
 	cli_execute("ballpit");
 	cli_execute("telescope high");
@@ -273,8 +310,9 @@ void buffs(boolean consume)
 	take_stash(1,$item[Platinum Yendorian Express Card]);
 	use(1,$item[Platinum Yendorian Express Card]);
 	put_stash(1,$item[Platinum Yendorian Express Card]);
+	// Eat/drink/spleen if told to
 	if (consume)
-		getEat((fullness_limit() - my_fullness() ) / 5,$item[Karma shawarma]);
+		consume1();
 	cli_execute("cast * resolution");
 }
 /*******************************************************
@@ -394,40 +432,34 @@ void yellowRay()
 }
 void diner()
 {
- 	// Consumables
-	equip($item[Brimstone Beret]);
-	use_skill(2,$skill[The Ode to Booze]);
-	getDrink(5,$item[perfect cosmopolitan]);
-	drink(1,$item[cold one]);
-	getChew(3,$item[Grim fairy tale]);
-	getUse(1,$item[mojo filter]);
-	getChew(1,$item[Grim fairy tale]);
-	//getUse(1,$item[Choco-Crimbot]);
-	//getUse(1,$item[chocolate turtle totem]);
-	cli_execute("shrug ode");
-	equip($item[crumpled felt fedora]);
-	//use_skill(1,$skill[Bind Lasagmbie]);
+ 	// Remove negatives
 	if (have_effect($effect[temporary blindness]) > 0)
 		cli_execute("hottub");
 	if (have_effect($effect[temporary blindness]) > 0)
 		cli_execute("shrug temporary blindness");
+	
 	if (have_effect($effect[everything looks yellow]) == 0)
 		yellowRay();
+	
 	// Get ready to adventure
 	use_familiar($familiar[Stocking Mimic]);
 	if (have_effect($effect[Merry Smithsness]) < 20)
 		use(1,$item[Flaskfull of Hollow]); // Make sure smithsness is running
+	
 	// Buffs
 	wobble($effect[Wasabi Sinuses], $item[Knob Goblin nasal spray], 10);
 	wobble($effect[Merry Smithsness], $item[Flaskfull of Hollow], 150);
+	
 	// Have fam, outfit, etc
 	use_familiar($familiar[Stocking Mimic]);
 	cli_execute("outfit Beach1");
 	cli_execute("autoattack Beach");
+	
 	// Get early stuff done; CSA fire-starter kit
 	adventure(30,$location[Sloppy seconds Diner]);
 	cli_execute("outfit Beach2");
 	adventure(20,$location[Sloppy seconds Diner]);
+	
 	// Eat food now
 	getUse(1,$item[milk of magnesium]);
 	getEat(1,$item[snow crab]);
@@ -604,27 +636,31 @@ void PvPFights(int stance, string hitfor)
 /*******************************************************/
 void main()
 {
+	// Setup
 	dataStart(); // Store inventory, meat, and adventures for calculations
  	cli_execute("aa beach");
 	cli_execute("viviStartDay.ash");
+	grabStash();
+	
+	// Charters
+	cli_execute("autoVolcano.ash");
+	cli_execute("autoConspiracy.ash");
+	
+	// No or minimal turn use
+	buffs(TRUE);
 	machineTunnels();	
 	chessFight();
-	take_stash(1,$item[pantsgiving]);
-	take_stash(1,$item[loathing legion knife]);
-	cli_execute("fold loathing legion helicopter");
-	use_familiar($familiar[Stocking Mimic]);
-	equip($slot[familiar],$item[loathing legion helicopter]);
- 	buffs(TRUE);
 	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos();
 	snojo();
 	fax();
-	cli_execute("autoVolcano.ash");
-	cli_execute("autoConspiracy.ash");
-	//cli_execute("autoGlacier.ash");
+
+	// Most turns
 	diner();
 	farm();
 	dataEnd(); // Store new inventory, meat, and turncount
+	
+	// Conclude
 	PvPFights(1,"lootwhatever"); // "fame" or "flowers" or "lootwhatever"
 	rollover();
 	
