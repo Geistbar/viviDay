@@ -645,6 +645,7 @@ void main()
 	// Charters
 	cli_execute("autoVolcano.ash");
 	cli_execute("autoConspiracy.ash");
+	cli_execute("aa beach");
 	
 	// No or minimal turn use
 	buffs(TRUE);
