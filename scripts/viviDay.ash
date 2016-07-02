@@ -682,7 +682,7 @@ void main()
 	dataEnd(); // Store new inventory, meat, and turncount
 	
 	// Conclude
-	PvPFights(1,"lootwhatever"); // "fame" or "flowers" or "lootwhatever"
+	//PvPFights(1,"lootwhatever"); // "fame" or "flowers" or "lootwhatever"
 	rollover();
 	
 	// How much meat did I make?
