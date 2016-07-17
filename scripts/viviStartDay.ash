@@ -48,11 +48,14 @@ visit_url("place.php?whichplace=airport_stench&action=airport3_tunnels");
 visit_url("choice.php?pwd&option=6&whichchoice=1067");
 
 // Tea Tree
-cli_execute("teatree voraci");
-put_closet(item_amount($item[cuppa voraci tea]),$item[cuppa voraci tea]);
+cli_execute("teatree royal");
+put_closet(item_amount($item[cuppa royal tea]),$item[cuppa royal tea]);
 
 // Draw 3 cards
 cli_execute("cheat island; cheat recall; cheat mickey; autosell 1952 Mickey Mantle card");
+
+// Cop bucks
+cli_execute("Detective Solver.ash");
 
 // Barrel god
 // visit_url("da.php?barrelshrine=1");
