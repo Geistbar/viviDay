@@ -2,11 +2,6 @@ script autoDayStart.ash;
 import <zlib.ash>
 // Does beginning of day stuff that Mafia still doesn't do automatically
 
-// Store inventory, meat, and adventures for calculations
-int[item] invStart = get_inventory();
-foreach eqSlot in $slots[acc1, acc2, acc3, off-hand, weapon, hat, pants, back, shirt]
-	invStart[equipped_item(eqSlot)]+=1;
-
 // Buy elemental wads if necessary
 foreach it in $items[cold wad, hot wad, stench wad, sleaze wad, spooky wad, twinkly wad]
 	if (item_amount(it) < 3)
@@ -36,8 +31,6 @@ use(1,$item[BittyCar MeatCar]);
 cli_execute("Make 3 Potion of punctual companionship");
 cli_execute("shower ice");
 cli_execute("cast 10 taffy");
-//use(5,$item[Jerks' Health&trade; Magazine]);
-//use(1,$item[CSA fire-starting kit]);
 
 // Get DNA Potions Cause Lazy
 visit_url("campground.php?action=dnapotion");
@@ -47,7 +40,6 @@ visit_url("campground.php?action=dnapotion");
 cli_execute("breakfast");
 
 visit_url("place.php?whichplace=chateau&action=chateau_desk2");
-//buy(11,$item[mummy wrapping],130);
 
 // Get funfunds from maintenance
 if (item_amount($item[bag of park garbage]) == 0)
@@ -65,26 +57,3 @@ cli_execute("cheat island; cheat recall; cheat mickey; autosell 1952 Mickey Mant
 // Barrel god
 // visit_url("da.php?barrelshrine=1");
 // visit_url("choice.php?pwd&whichchoice=1100&option=4");
-
-// Store new inventory, meat, and turncount
-int[item] invStop = get_inventory();
-foreach eqSlot in $slots[acc1, acc2, acc3, off-hand, weapon, hat, pants, back, shirt]
-	invStop[equipped_item(eqSlot)]+=1;
-// How much meat did I make?
-float itemGain = 0;
-float itemLoss = 0;
-foreach it in invStop
-{
-	if (invStop[it] > invStart[it])
-		itemGain += historical_price(it)*(invStop[it]-invStart[it]);
-	if (invStop[it] < invStart[it])
-		itemLoss += historical_price(it)*(invStop[it]-invStart[it])*-1;
-}
-print("Total item expenses: " + rnum(itemLoss,2) + " Meat","red");
-print("Total item gain: " + rnum(itemGain,2) + " Meat","green");
-
-print("The fifth cheapest Mr. A is: " + rnum(mall_price($item[Mr. Accessory])) + " meat.","red");
-print("The fifth cheapest Uncle Buck is: " + rnum(mall_price($item[Uncle Buck])) + " meat.","red");
-print("The fifth cheapest rubber nubbin is: " + rnum(mall_price($item[rubber nubbin])) + " meat.","red");
-print("By using this script you agree to the scriptract. Thanks!","green");
-print("Go mine at the velvet mine. By.. ugh.. hand. So peasant-like.");
