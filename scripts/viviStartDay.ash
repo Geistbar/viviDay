@@ -37,6 +37,11 @@ visit_url("campground.php?action=dnapotion");
 visit_url("campground.php?action=dnapotion");
 visit_url("campground.php?action=dnapotion");
 
+// Source Terminal
+cli_execute("terminal extrude food");
+cli_execute("terminal extrude food");
+cli_execute("terminal extrude food");
+
 cli_execute("breakfast");
 
 visit_url("place.php?whichplace=chateau&action=chateau_desk2");
