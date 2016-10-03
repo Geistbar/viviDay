@@ -66,6 +66,6 @@ cli_execute("cheat island; cheat recall; cheat mickey; autosell 1952 Mickey Mant
 // Cop bucks
 cli_execute("Detective Solver.ash");
 
-// Barrel god
+// Barrel god.
 // visit_url("da.php?barrelshrine=1");
 // visit_url("choice.php?pwd&whichchoice=1100&option=4");
