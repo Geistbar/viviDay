@@ -42,6 +42,10 @@ cli_execute("terminal extrude food");
 cli_execute("terminal extrude food");
 cli_execute("terminal extrude food");
 
+// Farfuture booze
+cli_execute("Farfuture booze");
+put_closet(item_amount($item[Shot of Kardashian Gin]),$item[Shot of Kardashian Gin]);
+
 cli_execute("breakfast");
 
 visit_url("place.php?whichplace=chateau&action=chateau_desk2");
