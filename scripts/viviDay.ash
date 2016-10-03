@@ -402,6 +402,8 @@ void machineTunnels()
 		equip($slot[acc2],$item[Mr. Screege's spectacles]);
 	if (!have_equipped($item[Mr. Cheeng's spectacles]))
 		equip($slot[acc3],$item[Mr. Cheeng's spectacles]);
+	if (!have_equipped($item[KoL Con 13 snowglobe]))
+		equip($item[KoL Con 13 snowglobe]);
 	while((get_property("_machineTunnelsAdv").to_int() < 5) && (times < 5))
 	{
 		adv1($location[The Deep Machine Tunnels],-1,"");
@@ -675,9 +677,9 @@ void main()
 	buffs(TRUE);
 	machineTunnels();	
 	chessFight();
-	freeRun($location[A Mob of Zeppelin Protesters]);
 	brickos();
 	snojo();
+	freeRun($location[A Mob of Zeppelin Protesters]);
 	fax();
 
 	// Most turns
