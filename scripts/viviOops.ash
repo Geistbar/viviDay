@@ -1,4 +1,4 @@
-script "ViviDay.ash"
+script "ViviOops.ash"
 import <zlib.ash>
 /*******************************************************
 *	ViviDay.ash
@@ -668,30 +668,44 @@ void main()
 	// Setup
 	dataStart(); // Store inventory, meat, and adventures for calculations
  	cli_execute("aa beach");
-	cli_execute("viviStartDay.ash");
-	grabStash();
-	
+	if (user_confirm("Run startday?"))
+		cli_execute("viviStartDay.ash");
+	if (user_confirm("Grab items from stash and equip on mimic?"))
+		grabStash();
+		
 	// Charters
-	cli_execute("autoVolcano.ash");
-	cli_execute("autoConspiracy.ash");
+	if (user_confirm("Run autoVolcano?"))
+		cli_execute("autoVolcano.ash");
+	if (user_confirm("Run autoConspiracy?"))
+		cli_execute("autoConspiracy.ash");
 	cli_execute("aa beach");
 	
 	// No or minimal turn use
-	buffs(TRUE);
-	machineTunnels();	
-	chessFight();
-	brickos();
-	snojo();
-	freeRun($location[A Mob of Zeppelin Protesters]);
-	fax();
+	if (user_confirm("Use fancy buffys & eat/drink?"))
+		buffs(TRUE);
+	if (user_confirm("Use free machine tunnel fights?"))
+		machineTunnels();	
+	if (user_confirm("Use free chess fights?"))
+		chessFight();
+	if (user_confirm("Use free bricko fights?"))
+		brickos();
+	if (user_confirm("Use snojo fights?"))
+		snojo();
+	if (user_confirm("Use free runaways?"))
+		freeRun($location[A Mob of Zeppelin Protesters]);
+	if (user_confirm("Use fax & putty copies?"))
+		fax();
 
 	// Most turns
-	diner();
-	farm();
+	if (user_confirm("Adventure at the diner?"))	
+		diner();
+	if (user_confirm("Use up remaining turns at barf mountain?"))
+		farm();
 	dataEnd(); // Store new inventory, meat, and turncount
 	
 	// Conclude
-	//PvPFights(1,"lootwhatever"); // "fame" or "flowers" or "lootwhatever"
+	if (user_confirm("Use PvP Fights?"))
+		PvPFights(1,"lootwhatever"); // "fame" or "flowers" or "lootwhatever"
 	rollover();
 	
 	// How much meat did I make?
