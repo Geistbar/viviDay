@@ -42,6 +42,11 @@ cli_execute("terminal extrude food");
 cli_execute("terminal extrude food");
 cli_execute("terminal extrude food");
 
+// Sea Jelly
+use_familiar($familiar[Space Jellyfish]);
+visit_url("place.php?whichplace=thesea&action=thesea_left2");
+run_choice(1);
+
 // Farfuture booze
 cli_execute("Farfuture booze");
 put_closet(item_amount($item[Shot of Kardashian Gin]),$item[Shot of Kardashian Gin]);
