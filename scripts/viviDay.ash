@@ -107,7 +107,7 @@ void getChew(int qty, item it)
 {
 	int qtyNeeded = qty - item_amount(it);
 	if (qtyNeeded > 0)
-		cli_execute("Buy " + qtyNeeded + " " + it);
+		buy(qtyNeeded,it,10000);
 	chew(qty,it);
 }
 /*******************************************************
@@ -120,7 +120,7 @@ void getDrink(int qty, item it)
 	if (it == $item[Broberry brogurt] && qtyNeeded > 0) // Don't mall these
 		buy($coinmaster[The Frozen Brogurt Stand],qty,it);
 	else if (qtyNeeded > 0)
-		cli_execute("Buy " + qtyNeeded + " " + it);
+		buy(qtyNeeded,it,10000);
 	drink(qty,it);
 }
 /*******************************************************
@@ -136,7 +136,7 @@ void getEat(int qty, item it)
 			buy($coinmaster[The SHAWARMA Initiative],qty,it);
 	}
 	else if (qtyNeeded > 0)
-		cli_execute("Buy " + qtyNeeded + " " + it);
+		buy(qtyNeeded,it,10000);
 	eat(qty,it);
 }
 /*******************************************************
