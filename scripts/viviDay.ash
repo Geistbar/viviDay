@@ -155,7 +155,8 @@ void getUse(int qty, item it)
 				chat_private("Giestbar","I'm low on " + it);
 		}
 		else
-			cli_execute("Buy " + qtyNeeded + " " + it);
+			buy(qtyNeeded,it,10000);
+			//cli_execute("Buy " + qtyNeeded + " " + it);
 	}
 	use(qty,it);
 }
@@ -336,7 +337,7 @@ void brickos()
  	if (item_amount($item[bricko ooze]) < 10)
 	{
 		int qty = 10 - item_amount($item[bricko ooze]);
-		buy(qty,$item[bricko ooze]);
+		buy(qty,$item[bricko ooze],500);
 	}
 	//use_skill(1,$skill[Bind Spice Ghost]);
 	use_familiar($familiar[Fist Turkey]);
