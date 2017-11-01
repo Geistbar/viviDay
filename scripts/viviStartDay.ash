@@ -47,10 +47,6 @@ use_familiar($familiar[Space Jellyfish]);
 visit_url("place.php?whichplace=thesea&action=thesea_left2");
 run_choice(1);
 
-// Farfuture booze
-cli_execute("Farfuture booze");
-put_closet(item_amount($item[Shot of Kardashian Gin]),$item[Shot of Kardashian Gin]);
-
 cli_execute("breakfast");
 
 visit_url("place.php?whichplace=chateau&action=chateau_desk2");

@@ -711,4 +711,8 @@ void main()
 	print("Total PvP item profits: " + rnum(itemGainPvP,2) + " meat", "maroon");
 	print(""); // Formatting
 	print("You won " + wins + " out of " + fights + " PvP fights!", "maroon");
+	
+	// Far Future
+	cli_execute("Farfuture booze");
+	put_closet(item_amount($item[Shot of Kardashian Gin]),$item[Shot of Kardashian Gin]);
 }
