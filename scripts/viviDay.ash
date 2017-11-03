@@ -337,7 +337,8 @@ void brickos()
  	if (item_amount($item[bricko ooze]) < 10)
 	{
 		int qty = 10 - item_amount($item[bricko ooze]);
-		cli_execute("Buy " + qty + " bricko ooze" +  + " @ 500");
+		if (qty > 0)
+			cli_execute("Buy " + qty + " bricko ooze" +  + " @ 500");
 	}
 	//use_skill(1,$skill[Bind Spice Ghost]);
 	use_familiar($familiar[Fist Turkey]);
