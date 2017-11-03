@@ -437,7 +437,7 @@ void freeRun(location place)
 	bootsRun(availableRunaways(),place);
 	equip($item[gnawed-up dog bone]);
 	bootsRun(availableRunaways(),place);
-	equip($item[old-school flying disc]);
+	equip($item[old school flying disc]);
 	bootsRun(availableRunaways(),place);
 	equip($slot[familiar],$item[sugar shield]);
 	bootsRun(availableRunaways(),place);
