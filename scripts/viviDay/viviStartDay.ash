@@ -67,6 +67,23 @@ cli_execute("cheat island; cheat recall; cheat mickey; autosell 1952 Mickey Mant
 // Cop bucks
 cli_execute("Detective Solver.ash");
 
+// Splendid martinis
+cli_execute("briefcase collect");
+
+// Farfuture booze
+cli_execute("Farfuture booze");
+put_shop(0,0,$item[Shot of Kardashian Gin]);
+
+// 3 wishes
+string wish = "I wish for a pony"; //"I was rich"; //"More wishes"; //
+int times = 0;
+while (times < 3)
+{
+	visit_url("inv_use.php?whichitem=9529");
+	visit_url("choice.php?whichchoice=1267&option=1&wish=" + wish);
+	times+=1;
+}
+
 // Barrel god.
 // visit_url("da.php?barrelshrine=1");
 // visit_url("choice.php?pwd&whichchoice=1100&option=4");
