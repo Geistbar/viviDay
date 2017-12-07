@@ -11,7 +11,7 @@ void buffs()
 	cli_execute("terminal enhance meat"); cli_execute("terminal enhance meat"); cli_execute("terminal enhance meat");
 	use(1,$item[The Legendary Beat]);
 	cli_execute("pool 1");
-	cli_execute("concert 2");
+	cli_execute("concert 3");
 	use_skill(1,$skill[Incredible Self-Esteem]);
 	use(1,$item[defective game grid token]);
 	

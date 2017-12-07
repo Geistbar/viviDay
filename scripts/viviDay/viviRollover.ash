@@ -15,7 +15,7 @@ void rollover()
 	put_closet(item_amount($item[rubber nubbin]),$item[rubber nubbin]);
 	use(item_amount($item[bag of park garbage])-5,$item[bag of park garbage]);
 	cli_execute("useMeatItems.ash");
-	cli_execute("PvPItemCheck.ash");
+	//cli_execute("PvPItemCheck.ash");
 	
 	// Get ready for rollover
 	equip($item[Pantsgiving]);
