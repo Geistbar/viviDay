@@ -87,6 +87,7 @@ void eatDrink()
 	//getUse(1,$item[chocolate turtle totem]);
 
 	// Eat
+	getUse(2,$item[milk of magnesium]);
 	eat(1,$item[spaghetti breakfast]);
 	getEat(4,$item[jumping horseradish]);
 	getEat(1,$item[Karma shawarma]);
