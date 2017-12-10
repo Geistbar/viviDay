@@ -13,4 +13,8 @@ void main()
 		
 	take_stash(1,$item[Pantsgiving]);
 	take_stash(1,$item[Loathing Legion Knife]);
+	
+	use_familiar($familiar[Stocking Mimic]);
+	cli_execute("fold loathing legion helicopter");
+	cli_execute("equip Loathing Legion helicopter");
 }

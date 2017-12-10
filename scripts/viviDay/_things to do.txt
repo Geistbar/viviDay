@@ -1,6 +1,0 @@
-digitize in viviBarf
-viviFax
-TT barrelgod buff for food
--- maybe change photocopy process?
--- fix digitize check for embezzler
-unstash items
