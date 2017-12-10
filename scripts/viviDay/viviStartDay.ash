@@ -84,6 +84,10 @@ while (times < 3)
 	times+=1;
 }
 
+// Stupid print screen button
+if (mall_price($item[bacon] < 500)
+	cli_execute("create print screen button");
+
 // Barrel god.
 // visit_url("da.php?barrelshrine=1");
 // visit_url("choice.php?pwd&whichchoice=1100&option=4");
