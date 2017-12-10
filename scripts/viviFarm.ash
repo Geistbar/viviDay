@@ -157,7 +157,7 @@ void main()
 	cli_execute("autoConspiracy.ash");
 	cli_execute("viviEvent.ash");
 	cli_execute("viviDiner.ash");
-	cli_execute("viviEldrtich.ash");
+	cli_execute("viviEldritch.ash");
 	cli_execute("viviEatDrink.ash");
 	cli_execute("viviBarf.ash");
 	
