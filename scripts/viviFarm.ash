@@ -167,7 +167,7 @@ void main()
 	//cli_execute("vivipvp.ash"); invStopPvP = get_inventory();
 	
 	cli_execute("viviStashReturn.ash");
-	cli_execute("vivirollover.ash");
+	cli_execute("viviRollover.ash");
 	
 	printOutput();
 }

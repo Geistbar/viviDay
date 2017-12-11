@@ -16,8 +16,8 @@ void main()
 	cli_execute("unequip loathing legion helicopter");
 	cli_execute("equip Bag of many confections");
 	cli_execute("fold loathing legion knife");
-	if (equipped_item($slot[pants]) == $item[pantsgiving])
-		equip($slot[pants],$item[none]);
+	//if (equipped_item($slot[pants]) == $item[Pantsgiving])
+	equip($slot[pants],$item[none]);
 		
 	put_stash(1,$item[Pantsgiving]);
 	put_stash(1,$item[Loathing Legion Knife]);

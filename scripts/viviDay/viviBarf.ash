@@ -81,8 +81,16 @@ void farm()
 	
 	cli_execute("pool 1");
 	cli_execute("pool 1");
+	
+	// Pantsgiving fullness
+	getUse(1,$item[milk of magnesium]);
+	adventure(2,$location[Barf Mountain]);
+	getEat(1,$item[ice rice]);
+	adventure(2,$location[Barf Mountain]);
+	getEat(1,$item[jumping horseradish]);
+	
 	// Finish adventuring -- Loop at final location while YRing
-	cli_execute("outfit mountain1"); // Last outfit change!
+	cli_execute("outfit Farming3");
 	while (my_adventures() > 0)
 	{	
 		if(numberologyCount < 2)
