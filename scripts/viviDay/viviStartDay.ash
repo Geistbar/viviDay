@@ -85,7 +85,7 @@ while (times < 3)
 }
 
 // Stupid print screen button
-if (mall_price($item[bacon] < 500)
+if (mall_price($item[bacon]) < 500)
 	cli_execute("create print screen button");
 
 // Barrel god.
