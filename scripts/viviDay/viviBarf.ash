@@ -79,8 +79,11 @@ void farm()
 	wobble($effect[Merry Smithsness], $item[Flaskfull of Hollow], 150);
 	wobble($effect[How to Scam Tourists], $item[How to Avoid Scams], 20);
 	
-	cli_execute("pool 1");
-	cli_execute("pool 1");
+	// Pool table
+	cli_execute("pool 1"); cli_execute("pool 1");
+	
+	// Switch familiar
+	use_familiar($familiar[Stocking Mimic]);
 	
 	// Pantsgiving fullness
 	getUse(1,$item[milk of magnesium]);
