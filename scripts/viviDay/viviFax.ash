@@ -20,7 +20,7 @@ void fax()
 	cli_execute("ccs Meat1");
 	cli_execute("familiar Obtuse Angel");
 	use(1,$item[photocopied monster]);
-	//visit_url("place.php?whichplace=chateau&action=chateau_painting");
+	visit_url("place.php?whichplace=chateau&action=chateau_painting");
 	run_combat();
 	cli_execute("outfit Meat2");
 	cli_execute("familiar Hobo Monkey");

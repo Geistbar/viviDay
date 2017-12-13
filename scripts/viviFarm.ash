@@ -152,7 +152,8 @@ void main()
 	cli_execute("viviMP-LOVE.ash");
 	cli_execute("nuns"); # Get mana
 	cli_execute("viviFreeRun.ash"); 
-	//cli_execute("viviFax");
+	cli_execute("viviGingerbread.ash");
+	cli_execute("viviFax");
 	cli_execute("viviYellowRay.ash");
 	cli_execute("autoConspiracy.ash");
 	cli_execute("viviEvent.ash");
