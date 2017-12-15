@@ -10,7 +10,7 @@ script "robGingerbread.ash"
 void gingerSetup(familiar f)
 {
 	// Setup equipment, familiar, autoattack
-	cli_execute("autoattack GingerbreadKills");
+	cli_execute("autoattack FreeKills");
 	use_familiar(f);
 	take_closet(1,$item[sour ball and chain]);
 	cli_execute("Outfit Freekills");
