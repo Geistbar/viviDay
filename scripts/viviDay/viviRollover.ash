@@ -18,7 +18,6 @@ void rollover()
 	//cli_execute("PvPItemCheck.ash");
 	
 	// Get ready for rollover
-	equip($item[Pantsgiving]);
 	while (get_property("timesRested").to_int() < total_free_rests())
 		cli_execute("rest");
 	cli_execute("swim sprints");
