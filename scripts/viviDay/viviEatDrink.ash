@@ -72,6 +72,7 @@ void eatDrink()
 	// Drink
 	equip($item[Brimstone Beret]);
 	use_skill(3,$skill[The Ode to Booze]);
+	getDrink(1,$item[splendid martini]); // Mime shotglass freebie
 	getDrink(1,$item[Broberry brogurt]);
 	getDrink(1,$item[ambitious turkey]);
 	getDrink(5,$item[perfect cosmopolitan]);
