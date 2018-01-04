@@ -143,20 +143,19 @@ void main()
 	
  	cli_execute("vivistartday.ash");
 	cli_execute("autovolcano.ash");
-	cli_execute("nuns"); # Get mana
+	cli_execute("nuns"); // Get mana
 	cli_execute("viviWitchess.ash");
 	cli_execute("viviSnojo.ash");
 	cli_execute("viviBrickos.ash");
 	cli_execute("viviMachinetunnels.ash");
 	cli_execute("viviFreeBuffs.ash");
 	cli_execute("viviMP-LOVE.ash");
-	cli_execute("nuns"); # Get mana
+	cli_execute("nuns"); // Get mana
 	cli_execute("viviFreeRun.ash"); 
 	cli_execute("viviGingerbread.ash");
 	cli_execute("viviFax");
 	cli_execute("viviYellowRay.ash");
 	cli_execute("autoConspiracy.ash");
-	cli_execute("viviEvent.ash");
 	cli_execute("viviDiner.ash");
 	cli_execute("viviEldritch.ash");
 	cli_execute("viviEatDrink.ash");
