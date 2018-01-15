@@ -96,7 +96,7 @@ void farm()
 	cli_execute("outfit Farming3");
 	while (my_adventures() > 0)
 	{	
-		if(numberologyCount < 2)
+		if(numberologyCount < 3)
 			numberology(69);
 		/* if (digitizeCount < 3 && get_property("_sourceTerminalDigitizeMonsterCount").to_int() >= 5)
 			digitizeUpdate(); */
