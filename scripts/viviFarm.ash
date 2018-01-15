@@ -156,6 +156,7 @@ void main()
 	cli_execute("viviFax");
 	cli_execute("viviYellowRay.ash");
 	cli_execute("autoConspiracy.ash");
+	cli_execute("viviJelly.ash");
 	cli_execute("viviDiner.ash");
 	cli_execute("viviEldritch.ash");
 	cli_execute("viviEatDrink.ash");
