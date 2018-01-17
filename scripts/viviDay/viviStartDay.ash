@@ -84,6 +84,10 @@ while (times < 3)
 	times+=1;
 }
 
+// Mum it up mummerfucker
+use_familiar($familiar[stocking mimic]);
+cli_execute("mummery meat");
+
 // Stupid print screen button
 if (mall_price($item[bacon]) < 500)
 	cli_execute("create print screen button");
