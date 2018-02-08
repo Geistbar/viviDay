@@ -5,7 +5,7 @@ script "viviRollover.ash"
 *	Finishes character day and gets ready for rollover.
 /*******************************************************/
 
-void rollover()
+void rolloverPrep()
 {
 	// Item Maintence
 	put_shop(0,0,$item[Five Second Energy&trade;]);
@@ -45,5 +45,5 @@ void rollover()
 
 void main()
 {
-	rollover();
+	rolloverPrep();
 }
