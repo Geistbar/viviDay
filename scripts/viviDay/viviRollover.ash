@@ -30,6 +30,8 @@ void rolloverPrep()
 
 	//	Drink nightcap
 	use_skill(1,$skill[The Ode to Booze]);
+	use_familiar($familiar[Stooper]);
+	drink(1,$item[Splendid Martini]);
 	take_stash(1,$item[tiny plastic sword]);
 	cli_execute("mix cherry bomb");
 	drink(1,$item[cherry bomb]);

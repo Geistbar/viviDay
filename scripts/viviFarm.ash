@@ -146,7 +146,7 @@ void main()
 	cli_execute("nuns"); // Get mana
 	cli_execute("viviWitchess.ash");
 	cli_execute("viviSnojo.ash");
-	cli_execute("viviBrickos.ash");
+	//cli_execute("viviBrickos.ash");
 	cli_execute("viviMachinetunnels.ash");
 	cli_execute("viviFreeBuffs.ash");
 	cli_execute("viviMP-LOVE.ash");
