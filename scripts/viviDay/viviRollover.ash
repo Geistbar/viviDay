@@ -23,10 +23,6 @@ void rolloverPrep()
 	cli_execute("swim sprints");
 	cli_execute("use Oscus's neverending soda");
 	cli_execute("cast * resolutions");
-	
-	// Change gear and familiar
-	cli_execute("outfit Rollover");
-	use_familiar($familiar[Trick-or-Treating Tot]);
 
 	//	Drink nightcap
 	use_skill(1,$skill[The Ode to Booze]);
@@ -37,6 +33,10 @@ void rolloverPrep()
 	drink(1,$item[cherry bomb]);
 	put_stash(1,$item[tiny plastic sword]);
 	cli_execute("shrug ode");
+	
+	// Change gear and familiar
+	cli_execute("outfit Rollover");
+	use_familiar($familiar[Trick-or-Treating Tot]);
 	
 	cli_execute("hottub");
 	
