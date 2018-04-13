@@ -56,7 +56,7 @@ void MPbuffs()
 	cli_execute("outfit lovetunnelMYS");
 	cli_execute("autoattack LoveTunnel");
 	use_familiar($familiar[Golden Monkey]);
-	loveTunnel(3,2,2); // Third choice for each
+	loveTunnel(3,2,1); // Third choice for each
 	cli_execute("cast * Summon Love Song");
 }
 
